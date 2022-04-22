@@ -1,0 +1,5 @@
+@use '../components/color';
+
+.h-nav-li-link[gs-bt-login=''] {
+  background-color: color.$lime;
+}

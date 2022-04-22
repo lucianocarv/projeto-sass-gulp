@@ -1,0 +1,4 @@
+- Format on Save: formata o arquivo sempre que salvo;
+- Single Quote - escolha entre aspas simples e duplas.
+- Semi - escolha se devem ser incluídos pontos-e-vírgulas no final das linhas.
+- Tab Width - especifique quantos espaços você deseja que um tab insira.

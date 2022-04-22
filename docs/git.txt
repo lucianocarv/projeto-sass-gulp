@@ -1,0 +1,7 @@
+- git init
+- git config --global user.name "meu nome"
+- git config --global user.email "meu email"
+- git add .
+- git status
+- git commit -m "comment"
+- git push -u origin main/master

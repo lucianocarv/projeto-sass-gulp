@@ -1,0 +1,64 @@
+@use 'components/reset';
+@use 'components/color';
+@use 'components/var';
+@use 'components/mixin';
+@use 'components/class';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: var.$no-margin;
+  padding: var.$no-padding;
+}
+
+body {
+  margin: var.$no-margin;
+  padding: var.$no-padding;
+  background-color: color.$gray;
+  font-family: var.$inter;
+  color: color.$white;
+}
+
+// HEADER
+
+.h-body {
+  width: 100%;
+  height: 70px;
+  @include mixin.flex(center, center);
+  background-color: color.$black;
+  .h-header {
+    width: var.$def-w;
+    height: 100%;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    .h-div-cont {
+      @include mixin.flex(center, space-between);
+      width: 100%;
+      .h-logo-img {
+        width: 40px;
+      }
+      .h-nav {
+        width: auto;
+        height: 100%;
+        .h-nav-list {
+          @include mixin.flex(center, space-around);
+          font-weight: 600;
+          .h-nav-li-link {
+            padding: 0px 5px;
+            font-size: 14px;
+            .h-nav-link {
+              text-decoration: none;
+              background: color.$gray;
+              padding: 10px 25px;
+              border-radius: 25px;
+              transition: var.$transition-df;
+              &:hover {
+                background: color.$lime;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
