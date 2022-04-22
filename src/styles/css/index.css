@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
 a {
   color: #fff;
 }
@@ -7,7 +8,7 @@ ul {
   list-style-type: none;
 }
 
-.h-nav-li-link[gs-bt-login=""] {
+.h-nav-li-link[gs-bt-login=''] {
   background-color: #228b22;
 }
 
@@ -20,7 +21,7 @@ body {
   margin: 0px;
   padding: 0px;
   background-color: #141414;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   color: #fff;
 }
 
@@ -45,8 +46,37 @@ body {
   justify-content: space-between;
   width: 100%;
 }
-.h-body .h-header .h-div-cont .h-logo-img {
-  width: 40px;
+.h-body .h-header .h-div-cont .logo-f {
+  width: auto;
+  padding: 5px 15px;
+  height: 30px;
+  border-radius: 50px;
+  background-image: linear-gradient(
+    10deg,
+    #0000cd 0% 20%,
+    transparent 22% 80%,
+    #0000cd 82% 100%
+  );
+  border: 1px solid #0000cd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.h-body .h-header .h-div-cont .logo-f .logo-spn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.h-body .h-header .h-div-cont .logo-f .logo-spn .logo-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  font-size: 25px;
+  font-weight: bold;
 }
 .h-body .h-header .h-div-cont .h-nav {
   width: auto;
@@ -59,18 +89,35 @@ body {
   font-weight: 600;
 }
 .h-body .h-header .h-div-cont .h-nav .h-nav-list .h-nav-li-link {
-  padding: 0px 5px;
+  padding: 0px 2px;
   font-size: 14px;
 }
 .h-body .h-header .h-div-cont .h-nav .h-nav-list .h-nav-li-link .h-nav-link {
   text-decoration: none;
-  background: #141414;
-  padding: 10px 25px;
+  padding: 10px 20px;
   border-radius: 25px;
   transition: all 0.3s ease;
 }
-.h-body .h-header .h-div-cont .h-nav .h-nav-list .h-nav-li-link .h-nav-link:hover {
-  background: #228b22;
+.h-body
+  .h-header
+  .h-div-cont
+  .h-nav
+  .h-nav-list
+  .h-nav-li-link
+  .h-nav-link:hover {
+  color: #4b0082;
+}
+.h-body .h-header .h-div-cont .h-nav .h-nav-list .h-nav-li-link #id-login {
+  background-color: #228b22;
+}
+.h-body
+  .h-header
+  .h-div-cont
+  .h-nav
+  .h-nav-list
+  .h-nav-li-link
+  #id-login:hover {
+  opacity: 0.8;
 }
 
 /*# sourceMappingURL=index.css.map */

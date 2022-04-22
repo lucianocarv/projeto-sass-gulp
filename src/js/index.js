@@ -4,5 +4,6 @@ const loginLink = headerLinks[lastLink]
 loginLink.setAttribute('gs-bt-login', 'gs-bt-login')
 const arrayOfAttr = headerLinks[lastLink].attributes.getNamedItem('gs-bt-login')
 if ((arrayOfAttr.value = 'gs-bt-login')) {
-  loginLink.style.backgroundColor = 'forestGreen'
+  loginLink.setAttribute('id', 'id-login')
+  loginLink.style.color = '#fff'
 }
