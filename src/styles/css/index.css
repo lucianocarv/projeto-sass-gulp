@@ -239,6 +239,7 @@ body {
   padding: 10px 20px;
   margin: 5px auto;
   text-decoration: none;
+  font-weight: bolder;
   transition: all 0.4s ease;
 }
 .menu-nav-right .ex-menu-list-r .li-link-nav-right .menu-li-link-a:hover {
