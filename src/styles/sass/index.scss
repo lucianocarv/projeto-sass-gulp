@@ -14,7 +14,7 @@
 body {
   margin: var.$no-margin;
   padding: var.$no-padding;
-  background-color: color.$gray;
+  background-color: color.$black;
   font-family: var.$inter;
   color: color.$white;
 }
@@ -23,13 +23,13 @@ body {
 
 .h-body {
   width: 100%;
-  height: 70px;
+  height: auto;
   @include mixin.flex(center, center);
   background-color: color.$black;
 
   .h-header {
     width: var.$def-w;
-    height: 100%;
+    height: auto;
     padding: 0px 10px;
     display: flex;
     align-items: center;
@@ -37,21 +37,13 @@ body {
     .h-div-cont {
       @include mixin.flex(center, space-between);
       width: 100%;
+      height: 70px;
 
       .logo-f {
         width: auto;
-        padding: 5px 15px;
+        padding: var.$p-al-hd;
         height: 30px;
         border-radius: 50px;
-        background-image: linear-gradient(
-          (
-            10deg,
-            color.$logo-color 0% 20%,
-            transparent 22% 80%,
-            color.$logo-color 82% 100%
-          )
-        );
-        border: 1px solid color.$logo-color;
         @include mixin.flex(center, center);
 
         .logo-spn {
@@ -65,6 +57,12 @@ body {
             padding: var.$no-padding;
             font-size: 25px;
             font-weight: bold;
+            a {
+              text-decoration: none;
+            }
+            .h-logo-detail {
+              color: color.$lime;
+            }
           }
         }
       }
@@ -73,28 +71,128 @@ body {
       .h-nav {
         width: auto;
         height: 100%;
-
+        @include mixin.flex(center, center);
         .h-nav-list {
           @include mixin.flex(center, space-around);
           font-weight: 600;
 
           .h-nav-li-link {
             padding: 0px 2px;
-            font-size: 14px;
+            font-size: 17px;
 
             .h-nav-link {
               text-decoration: none;
               padding: 10px 20px;
-              border-radius: 25px;
+              border-radius: 10px;
               transition: var.$transition-df;
               &:hover {
-                color: color.$indigo;
+                color: color.$lime;
               }
             }
             #id-login {
               background-color: color.$lime;
+              &:hover::before {
+                color: color.$lime;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Header Bottom Navigation
+
+.h-nav-bottom {
+  height: 50px;
+  background-color: color.$secondary;
+
+  .h-nav-bt-nav {
+    height: 100%;
+    max-width: var.$def-w;
+    margin: var.$mar-a-x;
+
+    .bt-nav-content {
+      height: 100%;
+      @include mixin.flex(center, space-between);
+
+      .bt-pad {
+        padding: var.$p-al-hd;
+      }
+
+      .bt-nav-menu {
+        font-size: 25px;
+        cursor: pointer;
+        transition: var.$transition-df;
+
+        &:hover {
+          color: color.$lime;
+        }
+      }
+
+      .bt-nav-search {
+        width: 45%;
+        height: 100%;
+        padding: 0px;
+        @include mixin.flex(center, center);
+        transition: var.$transition-df;
+
+        #h-search {
+          width: 80%;
+          height: 80%;
+          border-radius: var.$br-left;
+          padding: 5px 20px;
+          font-size: 16px;
+          background-color: color.$black;
+          color: #fff;
+          font-family: var.$inter;
+          font-weight: bold;
+        }
+
+        #bt-h-search {
+          width: 12%;
+          height: 80%;
+          cursor: pointer;
+          border-radius: var.$br-right;
+          font-size: 20px;
+          transition: var.$transition-df;
+
+          &:hover {
+            background-color: color.$lime;
+            color: #fff;
+          }
+        }
+
+        .df-search {
+          outline: none;
+          border: none;
+        }
+      }
+
+      .bt-nav-cat {
+        @include mixin.flex(center, flex-end);
+        width: auto;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        transition: var.$transition-df;
+        &:hover {
+          color: color.$lgray;
+        }
+
+        .h-nav-list-bt {
+          @include mixin.flex(center, space-between);
+
+          li {
+            padding: 5px;
+            a {
+              font-size: 22px;
+              transition: var.$transition-df;
+              border-radius: 10px;
+              padding: 8px 15px;
               &:hover {
-                opacity: 0.8;
+                color: color.$lime;
               }
             }
           }

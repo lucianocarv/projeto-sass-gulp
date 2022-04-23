@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projeto Gulp/Sass</title>
     <link rel="stylesheet" href="../src/styles/css/min/index.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css"
+      integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="h-body">
@@ -14,23 +28,33 @@
           <div class="h-logo">
             <div class="logo-f">
               <span class="logo-spn">
-                <p class="logo-text">gcstore.com</p>
+                <p class="logo-text">
+                  <a href="#">gcstore<span class="h-logo-detail">.com</span></a>
+                </p>
               </span>
             </div>
           </div>
           <nav class="h-nav">
             <ul class="h-nav-list">
               <li class="h-nav-li-link">
-                <a href="" class="h-nav-link">acesso</a>
+                <a href="" class="h-nav-link">
+                  <i class="fa-regular fa-heart"></i>
+                </a>
               </li>
               <li class="h-nav-li-link">
-                <a href="" class="h-nav-link">contato</a>
+                <a href="" class="h-nav-link">
+                  <i class="fa-regular fa-user"></i>
+                </a>
               </li>
               <li class="h-nav-li-link">
-                <a href="" class="h-nav-link">suporte</a>
+                <a href="" class="h-nav-link">
+                  <i class="fa-regular fa-circle-question"></i>
+                </a>
               </li>
               <li class="h-nav-li-link">
-                <a href="" class="h-nav-link">sobre</a>
+                <a href="" class="h-nav-link">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
               </li>
               <li class="h-nav-li-link">
                 <a href="" class="h-nav-link">login</a>
@@ -39,6 +63,49 @@
           </nav>
         </div>
       </header>
+    </div>
+    <div class="h-nav-bottom">
+      <div class="h-nav-bt-nav">
+        <nav class="bt-nav-content">
+          <div class="bt-pad bt-nav-menu" id="bt-nav-menu-id">
+            <i id="bt-menu-h" class="fa fa-bars"></i>
+          </div>
+          <div class="bt-pad bt-nav-search">
+            <input
+              class="df-search"
+              type="search"
+              name="h-search"
+              id="h-search"
+              spellcheck="false"
+              placeholder="pesquise aqui..."
+            />
+            <button class="df-search" type="submit" id="bt-h-search">
+              <i class="fa fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div class="bt-pad bt-nav-cat">
+            <nav class="nav-icons-bt">
+              <ul class="h-nav-list-bt">
+                <li class="h-nav-li-link">
+                  <a href="#" class="nav-bt-link">
+                    <i class="fa fa-cart-shopping"></i>
+                  </a>
+                </li>
+                <li class="h-nav-li-link">
+                  <a href="#" class="nav-bt-link">
+                    <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                  </a>
+                </li>
+                <li class="h-nav-li-link">
+                  <a href="#" class="nav-bt-link">
+                    <i class="fa fa-cart-shopping"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </nav>
+      </div>
     </div>
     <div class="c-body"></div>
     <div class="f-body"></div>
