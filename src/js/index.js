@@ -11,7 +11,7 @@ if ((arrayOfAttr.value = 'gs-bt-login')) {
 
 // Menu
 let bodyHtml = document.body
-let menuRightWidth = '300px'
+let menuRightWidth = '400px'
 let menuRighHiddenWidth = `-${menuRightWidth}`
 let menuDefaultTransition = 'all .5s ease'
 let menuButton = document.getElementById('bt-nav-menu-id')
