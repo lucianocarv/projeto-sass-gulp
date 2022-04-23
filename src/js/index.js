@@ -14,7 +14,7 @@ let bodyHtml = document.body
 let menuRightWidth = '300px'
 let menuRighHiddenWidth = `-${menuRightWidth}`
 let menuDefaultTransition = 'all .5s ease'
-const menuButton = document.getElementById('bt-nav-menu-id')
+let menuButton = document.getElementById('bt-nav-menu-id')
 menuButton.setAttribute('onclick', 'clickMenuForDisplay()')
 let menuHeader = document.createElement('div')
 menuHeader.setAttribute('class', 'display-menu')
@@ -28,18 +28,37 @@ let menuDisplay = document.querySelector('#display-menu-id')
 const clickMenuForDisplay = () => {
   let menuOpen = document.getElementById('bt-menu-h')
   if (menuHeader.style.marginRight == menuRighHiddenWidth) {
-    menuButton.style.transform = 'rotateX(180deg)'
-    menuHeader.style.marginRight = '0px'
-    menuHeader.style.position = 'fixed'
-    menuOpen.setAttribute('class', 'fa fa-rectangle-xmark')
-  } else {
-    menuButton.style.transform = 'rotateX(-180deg)'
-    menuHeader.style.marginRight = menuRighHiddenWidth
-    menuOpen.setAttribute('class', 'fa fa-bars')
-    menuButton.style.transform = 'rotateX()'
-    menuButton.style.transform = 'none'
+    if (document.body.clientWidth > 600) {
+      menuButton.style.transform = 'rotateX(180deg)'
+      menuHeader.style.marginRight = '0px'
+      menuHeader.style.position = 'fixed'
+      menuOpen.setAttribute('class', 'fa fa-rectangle-xmark')
+      menuButton.setAttribute('onclick', 'clickMenuClose()')
+    } else {
+      menuRightWidth = '70%'
+      menuHeader.style.width = menuRightWidth
+      menuHeader.style.display = 'block'
+      menuButton.style.transform = 'rotateX(180deg)'
+      menuHeader.style.marginRight = '0px'
+      menuHeader.style.position = 'fixed'
+      menuOpen.setAttribute('class', 'fa fa-rectangle-xmark')
+      menuButton.setAttribute('onclick', 'clickMenuClose()')
+    }
   }
 }
+
+const clickMenuClose = () => {
+  menuOpen = document.getElementById('bt-menu-h')
+  menuButton.style.transform = 'rotateX(-180deg)'
+  menuHeader.style.marginRight = menuRighHiddenWidth
+  menuOpen.setAttribute('class', 'fa fa-bars')
+  menuButton.style.transform = 'rotateX()'
+  menuButton.style.transform = 'none'
+  menuButton = document.getElementById('bt-nav-menu-id')
+  menuButton.setAttribute('onclick', 'clickMenuForDisplay()')
+}
+
+// Mobile
 
 // Menu Content
 let menuContainerTagOpen = '<nav class="menu-nav-right" id="righ-nav-content">'
@@ -54,18 +73,15 @@ getMenuArea.innerHTML = setMenuConatinerListOpen + setMenuConatinerListClose
 let getMenuAreaUl = document.getElementById('ex-list-menu')
 let getMenuUL = getMenuAreaUl.setAttribute('class', 'ex-menu-list-r')
 const setLinksMenu = [
-  'notebooks',
-  'headsets',
-  'placa-mãe',
-  'memória ram',
-  'placa de vídeo',
+  'hardware',
   'periféricos',
-  'monitores',
-  'for gamers',
-  'smartphones',
-  'decoração',
-  'teclados',
-  'parceiros',
+  'games',
+  'cadeiras',
+  'computadores',
+  'celular e smartphones',
+  'tv',
+  'tablets',
+  'outros',
 ]
 setLinksMenu.forEach((link) => {
   let liLink = document.createElement('li')
@@ -80,3 +96,5 @@ setLinksMenu.forEach((link) => {
     menuLinkClose
   getMenuAreaUl.insertAdjacentElement('beforeend', liLink)
 })
+
+// Mobile
