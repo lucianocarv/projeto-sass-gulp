@@ -232,8 +232,8 @@ body {
 
 .display-menu {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 100px;
+  left: 0;
   height: 100vh;
   transition: var.$transition-df;
 }
@@ -241,7 +241,7 @@ body {
   min-height: 100%;
   background-color: #1a1a1a;
   .ex-menu-list-r {
-    padding-top: 20px;
+    padding-top: 50px;
     width: 100%;
 
     .li-link-nav-right {
@@ -250,8 +250,8 @@ body {
       .menu-li-link-a {
         @include mixin.flex(center, space-between);
 
-        padding: 10px 20px;
-        margin: 5px auto;
+        padding: 8px 10px;
+        margin: 1px auto;
         text-decoration: none;
         font-weight: bolder;
         transition: var.$transition-df;
@@ -309,24 +309,13 @@ body {
       }
     }
   }
-  .display-menu {
-    position: absolute;
-    top: 0;
-    display: none;
-  }
+
   .menu-nav-right {
-    min-height: 100%;
     background-color: #1a1a1a;
     .ex-menu-list-r {
-      padding-top: 0px;
-      width: auto;
-
       .li-link-nav-right {
-        width: auto;
-
         .menu-li-link-a {
           @include mixin.flex(center, space-between);
-          border-bottom: 2px solid rgb(51, 51, 51);
           text-decoration: none;
           transition: var.$transition-df;
           border-radius: 5px;
@@ -343,4 +332,27 @@ body {
 
 .c-body {
   height: 1000px;
+}
+
+// Slider
+
+.slider-1 {
+  max-width: 1170px;
+  height: 400px;
+  margin: 0px auto;
+  background-color: blue;
+
+  .cfor-slider {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    background-color: purple;
+    transition: all 5s ease;
+    &:nth-child(1) {
+      background-color: lime;
+    }
+    &:nth-child(2) {
+      background-color: yellow;
+    }
+  }
 }

@@ -227,8 +227,8 @@ body {
 
 .display-menu {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 100px;
+  left: 0;
   height: 100vh;
   transition: all 0.4s ease;
 }
@@ -238,7 +238,7 @@ body {
   background-color: #1a1a1a;
 }
 .menu-nav-right .ex-menu-list-r {
-  padding-top: 20px;
+  padding-top: 50px;
   width: 100%;
 }
 .menu-nav-right .ex-menu-list-r .li-link-nav-right {
@@ -248,8 +248,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-  margin: 5px auto;
+  padding: 8px 10px;
+  margin: 1px auto;
   text-decoration: none;
   font-weight: bolder;
   transition: all 0.4s ease;
@@ -300,28 +300,13 @@ body {
     display: none;
   }
 
-  .display-menu {
-    position: absolute;
-    top: 0;
-    display: none;
-  }
-
   .menu-nav-right {
-    min-height: 100%;
     background-color: #1a1a1a;
-  }
-  .menu-nav-right .ex-menu-list-r {
-    padding-top: 0px;
-    width: auto;
-  }
-  .menu-nav-right .ex-menu-list-r .li-link-nav-right {
-    width: auto;
   }
   .menu-nav-right .ex-menu-list-r .li-link-nav-right .menu-li-link-a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 2px solid rgb(51, 51, 51);
     text-decoration: none;
     transition: all 0.4s ease;
     border-radius: 5px;
@@ -333,6 +318,26 @@ body {
 }
 .c-body {
   height: 1000px;
+}
+
+.slider-1 {
+  max-width: 1170px;
+  height: 400px;
+  margin: 0px auto;
+  background-color: blue;
+}
+.slider-1 .cfor-slider {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  background-color: purple;
+  transition: all 5s ease;
+}
+.slider-1 .cfor-slider:nth-child(1) {
+  background-color: lime;
+}
+.slider-1 .cfor-slider:nth-child(2) {
+  background-color: yellow;
 }
 
 /*# sourceMappingURL=index.css.map */
