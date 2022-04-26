@@ -1,19 +1,25 @@
-@use 'components/reset';
-@use 'components/color';
-@use 'components/var';
-@use 'components/mixin';
-@use 'components/class';
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@use "components/reset";
+@use "components/color";
+@use "components/var";
+@use "components/mixin";
+@use "components/class";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
 * {
   margin: var.$no-margin;
   padding: var.$no-padding;
+  dl,
+  ol,
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 body {
   margin: var.$no-margin;
   padding: var.$no-padding;
-  background-color: color.$black;
+  background-color: color.$white;
   font-family: var.$inter;
   color: color.$white;
   overflow-x: hidden;
@@ -213,10 +219,9 @@ body {
             .nav-bt-link {
               text-decoration: none;
               transition: var.$transition-df;
-              font-size: 28px;
+              font-size: 23px;
               border-radius: 10px;
-              padding: 0px 15px;
-              color: color.$terciary;
+              color: color.$white;
               &:hover {
                 opacity: var.$op-08;
               }
@@ -331,31 +336,78 @@ body {
 }
 
 .c-body {
-  height: 1000px;
-}
+  height: auto;
 
-// Slider
+  .c-body-top {
+    max-width: 1170px;
+    margin: 20px auto;
+    height: auto;
 
-.slider-1 {
-  max-width: 1170px;
-  height: 400px;
-  margin: 0px auto;
-  background-color: blue;
-
-  .cfor-slider {
-    position: absolute;
-    width: 400px;
-    height: 300px;
-    background-color: purple;
-    transition: all 5s ease;
-    &:nth-child(1) {
-      background-color: lime;
-    }
-    &:nth-child(2) {
-      background-color: yellow;
+    .c-b-t-content {
+      height: 600px;
+      background-color: color.$secondary;
+      border-radius: 10px;
     }
   }
-}
-.sdlkg {
-  background-color: blue;
+
+  .c-body-mid {
+    max-width: 1170px;
+    margin: 30px auto;
+    height: auto;
+    .c-b-m-content {
+      border-radius: 10px;
+      padding: 20px;
+
+      height: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: 15px;
+
+      @media screen and (min-width: 850px) and (max-width: 1000px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+
+      @media screen and (min-width: 700px) and (max-width: 849px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+
+      @media screen and (min-width: 500px) and (max-width: 699px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+
+      @media screen and (max-width: 499px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 5px;
+      }
+
+      .cmd-card {
+        height: 280px;
+        width: 200px;
+        margin: 0 auto;
+        border-radius: inherit;
+        background-color: color.$white;
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+          rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+
+        transition: var.$transition-df;
+
+        &:hover {
+          transform: scale(102%);
+        }
+
+        @media screen and (max-width: 499px) {
+          height: 200px;
+          width: 100%;
+          &:hover {
+            transform: scale(100%);
+          }
+        }
+      }
+    }
+  }
 }
