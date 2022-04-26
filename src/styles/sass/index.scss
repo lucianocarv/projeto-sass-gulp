@@ -1,9 +1,9 @@
-@use "components/reset";
-@use "components/color";
-@use "components/var";
-@use "components/mixin";
-@use "components/class";
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@use 'components/reset';
+@use 'components/color';
+@use 'components/var';
+@use 'components/mixin';
+@use 'components/class';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 * {
   margin: var.$no-margin;
@@ -386,18 +386,22 @@ body {
       }
 
       .cmd-card {
+        @include mixin.flex(center, space-between);
+        flex-direction: column;
         height: 280px;
         width: 200px;
         margin: 0 auto;
         border-radius: inherit;
-        background-color: color.$white;
+        background-image: linear-gradient(to top, color.$indigo 5% 10%, black);
+        color: color.$white;
+
         box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
           rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 
         transition: var.$transition-df;
 
         &:hover {
-          transform: scale(102%);
+          transform: scale(105%);
         }
 
         @media screen and (max-width: 499px) {
@@ -405,6 +409,50 @@ body {
           width: 100%;
           &:hover {
             transform: scale(100%);
+          }
+        }
+
+        i {
+          @include mixin.flex(center, center);
+          width: 100%;
+          height: auto;
+          padding: 20px 0px;
+          font-size: 45px;
+          border-radius: inherit;
+          border-bottom-left-radius: 0px;
+          border-bottom-right-radius: 0px;
+        }
+
+        .cmd-card-title {
+          width: 100%;
+          height: auto;
+          text-align: center;
+          font-size: 18px;
+
+          h3 {
+            font-weight: bolder;
+          }
+        }
+
+        .cmd-card-link {
+          @include mixin.flex(center, center);
+          height: 40%;
+          width: 100%;
+
+          button {
+            padding: 10px 50px;
+            cursor: pointer;
+            background-color: color.$white;
+            outline: 0px;
+            border: none;
+            border-radius: 50px;
+            transition: var.$transition-df;
+            font-weight: bold;
+
+            &:hover {
+              background-color: black;
+              color: white;
+            }
           }
         }
       }
