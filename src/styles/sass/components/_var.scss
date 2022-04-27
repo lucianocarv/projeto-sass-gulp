@@ -1,3 +1,5 @@
+@use 'color';
+
 // Margins
 $mar-auto: auto;
 $mar-a-x: 0px auto;
@@ -23,3 +25,6 @@ $transition-df: all 0.4s ease;
 
 // Opacity
 $op-08: 0.7;
+
+// Linear Gradient
+$indigo-linear: linear-gradient(to top, color.$indigo 5% 10%, black);

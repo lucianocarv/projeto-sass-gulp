@@ -32,7 +32,7 @@ body {
   width: 100%;
   height: auto;
   @include mixin.flex(center, center);
-  background-color: color.$black;
+  background-image: linear-gradient(to right, indigo, black);
 
   .h-header {
     width: var.$def-w;
@@ -68,7 +68,15 @@ body {
               text-decoration: none;
             }
             .h-logo-detail {
-              color: color.$terciary;
+              color: #fff;
+              background-image: linear-gradient(
+                338deg,
+                indigo 0% 50%,
+                transparent 52% 100%
+              );
+              padding: 5px;
+              padding-right: 12px;
+              border-radius: 10px;
             }
           }
         }
@@ -93,7 +101,7 @@ body {
               border-radius: 10px;
               transition: var.$transition-df;
               &:hover {
-                color: color.$terciary;
+                opacity: 0.7;
               }
             }
             #id-login {
@@ -131,7 +139,7 @@ body {
 
 .h-nav-bottom {
   height: 50px;
-  background-color: color.$secondary;
+  background-color: color.$indigo;
 
   .h-nav-bt-nav {
     height: 100%;
@@ -175,25 +183,25 @@ body {
           border-radius: var.$br-left;
           padding: 5px 20px;
           font-size: 16px;
-          background-color: color.$black;
+          background-color: color.$indigo-2;
           color: #fff;
           font-family: var.$inter;
           font-weight: bold;
+
+          &::-webkit-input-placeholder {
+            color: rgba(255, 255, 255, 0.7);
+          }
         }
 
         #bt-h-search {
           width: 12%;
           height: 80%;
           cursor: pointer;
-          background-color: color.$black;
+          background-color: color.$indigo-2;
           color: color.$white;
           border-radius: var.$br-right;
           font-size: 20px;
           transition: var.$transition-df;
-
-          &:hover {
-            color: color.$terciary;
-          }
         }
 
         .df-search {
@@ -219,6 +227,7 @@ body {
             .nav-bt-link {
               text-decoration: none;
               transition: var.$transition-df;
+              padding: 0px 10px;
               font-size: 23px;
               border-radius: 10px;
               color: color.$white;
@@ -244,7 +253,7 @@ body {
 }
 .menu-nav-right {
   min-height: 100%;
-  background-color: #1a1a1a;
+  background-color: indigo;
   .ex-menu-list-r {
     padding-top: 50px;
     width: 100%;
@@ -263,8 +272,8 @@ body {
         border-radius: 5px;
 
         &:hover {
-          transform: scale(101%);
-          background: color.$terciary;
+          transform: rotate(1deg);
+          background-color: color.$indigo-2;
         }
       }
     }
@@ -304,7 +313,7 @@ body {
             width: 20%;
 
             &:hover {
-              color: color.$terciary;
+              color: color.$white;
             }
           }
         }
@@ -392,7 +401,7 @@ body {
         width: 200px;
         margin: 0 auto;
         border-radius: inherit;
-        background-image: linear-gradient(to top, color.$indigo 5% 10%, black);
+        background-image: var.$indigo-linear;
         color: color.$white;
 
         box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
@@ -440,7 +449,7 @@ body {
           width: 100%;
 
           button {
-            padding: 10px 50px;
+            padding: 10px 30px;
             cursor: pointer;
             background-color: color.$white;
             outline: 0px;
