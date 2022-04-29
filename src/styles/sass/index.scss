@@ -19,7 +19,7 @@
 body {
   margin: var.$no-margin;
   padding: var.$no-padding;
-  background-color: color.$white;
+  background-color: black;
   font-family: var.$inter;
   color: color.$white;
   overflow-x: hidden;
@@ -276,7 +276,7 @@ body {
 }
 .menu-nav-right {
   min-height: 100%;
-  background-color: indigo;
+  background: linear-gradient(to bottom, indigo, black);
   .ex-menu-list-r {
     padding-top: 50px;
     width: 100%;
@@ -377,7 +377,8 @@ body {
 
     .c-b-t-content {
       height: 600px;
-      background-color: color.$secondary;
+      background-image: url('https://img.freepik.com/psd-gratuitas/display-de-produto-em-podio-com-luz-neon-3d_125755-706.jpg?w=1380');
+      background-size: 100%;
       border-radius: 10px;
     }
   }
