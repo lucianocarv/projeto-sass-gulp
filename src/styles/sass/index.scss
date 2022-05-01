@@ -16,6 +16,14 @@
   }
 }
 
+.card-pro-padding-bt-0 {
+  height: 100%;
+  padding-bottom: 0px;
+  transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+  text-decoration: none;
+  margin-left: 10px;
+}
+
 body {
   margin: var.$no-margin;
   padding: var.$no-padding;
@@ -105,16 +113,11 @@ body {
               cursor: pointer;
             }
 
-            #id-login {
-              background-color: color.$terciary;
-              &:hover {
-                opacity: var.$op-08;
-              }
-            }
-
             .log-detail-bt {
+              color: white;
               padding: 0px 5px;
-              border: 1px solid white;
+              border: 2px solid indigo;
+              background-color: transparent;
               border-radius: 50px;
               @include mixin.flex(center, space-between);
               font-size: 13px;
@@ -147,11 +150,6 @@ body {
   .logo-text a {
     font-size: 20px;
   }
-  .h-nav-li-link:nth-child(1),
-  .h-nav-li-link:nth-child(3),
-  .h-nav-li-link:nth-child(4) {
-    display: none;
-  }
 
   .h-header {
     width: 100vw;
@@ -161,6 +159,7 @@ body {
 // Header Bottom Navigation
 
 .h-nav-bottom {
+  position: -webkit-sticky;
   height: 50px;
   background-color: color.$indigo;
 
@@ -377,8 +376,7 @@ body {
 
     .c-b-t-content {
       height: 600px;
-      background-image: url('https://img.freepik.com/psd-gratuitas/display-de-produto-em-podio-com-luz-neon-3d_125755-706.jpg?w=1380');
-      background-size: 100%;
+      border: 2px solid indigo;
       border-radius: 10px;
     }
   }
@@ -415,7 +413,7 @@ body {
       @media screen and (max-width: 499px) {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
-        grid-gap: 5px;
+        grid-gap: 12px;
       }
 
       .cmd-card {
@@ -425,6 +423,7 @@ body {
         width: 200px;
         margin: 0 auto;
         border-radius: inherit;
+        border: 2px solid indigo;
         background-image: var.$indigo-linear;
         color: color.$white;
 
@@ -438,7 +437,7 @@ body {
         }
 
         @media screen and (max-width: 499px) {
-          height: 200px;
+          height: 250px;
           width: 100%;
           &:hover {
             transform: scale(100%);
@@ -461,9 +460,14 @@ body {
           height: auto;
           text-align: center;
           font-size: 18px;
+          cursor: context-menu;
 
           h3 {
             font-weight: bolder;
+          }
+
+          @media screen and (max-width: 500px) {
+            font-size: 14px;
           }
         }
 
@@ -473,12 +477,14 @@ body {
           width: 100%;
 
           button {
+            color: white;
             padding: 10px 30px;
             cursor: pointer;
-            background-color: color.$white;
+            background-color: transparent;
             outline: 0px;
             border: none;
             border-radius: 50px;
+            box-shadow: 0px 0px 1px 2px color.$indigo-2;
             transition: var.$transition-df;
             font-weight: bold;
 
@@ -493,16 +499,224 @@ body {
   }
 }
 
-// Teste
-.window-login-content {
-  position: absolute;
-  display: block;
-  top: 50%;
-  left: 50%;
-  margin-top: -15%;
-  margin-left: -10%;
-  height: 60%;
-  width: 20%;
-  border-radius: 30px;
-  background-color: indigo;
+// c body pro
+
+.c-body-content-pro {
+  height: auto;
+  width: 100%;
+
+  .pro-title {
+    max-width: 1170px;
+    margin: 0 auto;
+    height: 70px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    h1 {
+      width: 50%;
+      margin: 0 auto;
+      padding: 10px 20px;
+      border-radius: 50px;
+      background-color: color.$secondary;
+      border: 2px solid indigo;
+      box-sizing: border-box;
+
+      @media screen and (max-width: 600px), (orientation: portrait) {
+        width: 100%;
+        font-size: 1em;
+      }
+    }
+  }
+
+  .pro-view-over {
+    max-width: 1170px;
+    margin: 0 auto;
+    overflow: scroll;
+    overflow-y: hidden;
+    &::-webkit-scrollbar {
+      background-color: color.$secondary;
+      border-radius: 50px;
+      height: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      width: 10%;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: indigo;
+      border-radius: 50px;
+    }
+  }
+
+  .pro-view-scroll {
+    width: 100%;
+    height: auto;
+
+    .link-card-pro {
+      height: 100%;
+      padding-bottom: 30px;
+      transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .pro-view-scroll-content {
+      margin: 0 auto;
+      display: flex;
+      padding: 10px;
+      align-items: center;
+      justify-content: flex-start;
+
+      .card-view-sc {
+        height: 100%;
+        min-width: 220px;
+        border: 5px solid transparent;
+        padding: 10px;
+        border-collapse: collapse;
+
+        .card-view-sc-content {
+          height: 100%;
+          width: 100%;
+          border-radius: 10px;
+
+          background-color: white;
+        }
+      }
+    }
+  }
+}
+
+.link-card-pro {
+  text-decoration: none;
+}
+
+.card-pro-item {
+  background: linear-gradient(to top, indigo 0% 20%, black 60% 100%);
+  border: 2px solid indigo;
+  width: 220px;
+  height: 270px;
+  border-radius: 10px;
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+  @media screen and (max-width: 600px) {
+    width: 167px;
+    height: 220px;
+  }
+
+  .top-card-img {
+    width: 100%;
+    height: 60%;
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    picture {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      width: 60%;
+      margin: 0 auto;
+      transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+      &:hover {
+        transform: rotate(10deg);
+      }
+    }
+  }
+
+  .mid-card-info {
+    height: 20%;
+    width: 100%;
+    @include mixin.flex(center, flex-start);
+    padding: 10px;
+    box-sizing: border-box;
+
+    p {
+      font-size: 12px;
+
+      @media screen and (max-width: 600px) {
+        font-size: 10px;
+      }
+    }
+  }
+
+  .foo-card-buy {
+    width: 100%;
+    height: 20%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 0px 0px 10px 10px;
+
+    @include mixin.flex(center, space-around);
+    .card-price {
+      font-size: 1em;
+      color: #2fb40d;
+      font-weight: 700;
+
+      @media screen and (max-width: 600px) {
+        font-size: 0.7em;
+      }
+
+      p:nth-child(2) {
+        font-size: 10px;
+      }
+    }
+
+    .card-buy-bt {
+      .bt-buy-sty {
+        padding: 5px 10px;
+        border-radius: 50px;
+        border: 2px solid #2fb40d;
+        background-color: transparent;
+        color: white;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+        &:hover {
+          background-color: #2fb40d;
+        }
+
+        @media screen and (max-width: 600px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.pro-all-itens {
+  height: auto;
+  width: 100%;
+  padding: 50px 0px;
+
+  .pro-all-itens-content {
+    max-width: 1170px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    grid-gap: 10px;
+
+    @media screen and (max-width: 600px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+.card-pro-item-promo {
+  background: linear-gradient(to top, color.$indigo-2, indigo);
+  border: 2px solid rgb(255, 0, 0);
 }

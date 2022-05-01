@@ -92,15 +92,3 @@ setLinksMenu.forEach((link) => {
 })
 
 // Mobile
-
-// Janela Login
-let loginButtonTop = document.getElementById('login-bt-top')
-loginButtonTop.setAttribute('onclick', 'clickEventLoginBt()')
-
-function clickEventLoginBt() {
-  let bodyHtml = document.getElementById('absolute-content')
-  let windowLogin = document.createElement('div')
-  windowLogin.setAttribute('class', 'window-login-content')
-
-  bodyHtml.appendChild(windowLogin)
-}

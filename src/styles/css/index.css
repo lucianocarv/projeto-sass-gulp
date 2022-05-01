@@ -22,6 +22,14 @@ ul {
   margin-bottom: 0;
 }
 
+.card-pro-padding-bt-0 {
+  height: 100%;
+  padding-bottom: 0px;
+  transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+  text-decoration: none;
+  margin-left: 10px;
+}
+
 body {
   margin: 0px;
   padding: 0px;
@@ -117,15 +125,11 @@ body {
   flex-direction: row;
   cursor: pointer;
 }
-.h-body .h-header .h-div-cont .h-nav .h-nav-list .h-nav-li-link #id-login {
-  background-color: #228b22;
-}
-.h-body .h-header .h-div-cont .h-nav .h-nav-list .h-nav-li-link #id-login:hover {
-  opacity: 0.7;
-}
 .h-body .h-header .h-div-cont .h-nav .h-nav-list .h-nav-li-link .log-detail-bt {
+  color: white;
   padding: 0px 5px;
-  border: 1px solid white;
+  border: 2px solid indigo;
+  background-color: transparent;
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -153,17 +157,12 @@ body {
     font-size: 20px;
   }
 
-  .h-nav-li-link:nth-child(1),
-.h-nav-li-link:nth-child(3),
-.h-nav-li-link:nth-child(4) {
-    display: none;
-  }
-
   .h-header {
     width: 100vw;
   }
 }
 .h-nav-bottom {
+  position: -webkit-sticky;
   height: 50px;
   background-color: #4b0082;
 }
@@ -358,8 +357,7 @@ body {
 }
 .c-body .c-body-top .c-b-t-content {
   height: 600px;
-  background-image: url("https://img.freepik.com/psd-gratuitas/display-de-produto-em-podio-com-luz-neon-3d_125755-706.jpg?w=1380");
-  background-size: 100%;
+  border: 2px solid indigo;
   border-radius: 10px;
 }
 .c-body .c-body-mid {
@@ -398,7 +396,7 @@ body {
   .c-body .c-body-mid .c-b-m-content {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    grid-gap: 5px;
+    grid-gap: 12px;
   }
 }
 .c-body .c-body-mid .c-b-m-content .cmd-card {
@@ -410,6 +408,7 @@ body {
   width: 200px;
   margin: 0 auto;
   border-radius: inherit;
+  border: 2px solid indigo;
   background-image: linear-gradient(to top, #4b0082 5% 10%, black);
   color: #fff;
   box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
@@ -420,7 +419,7 @@ body {
 }
 @media screen and (max-width: 499px) {
   .c-body .c-body-mid .c-b-m-content .cmd-card {
-    height: 200px;
+    height: 250px;
     width: 100%;
   }
   .c-body .c-body-mid .c-b-m-content .cmd-card:hover {
@@ -444,9 +443,15 @@ body {
   height: auto;
   text-align: center;
   font-size: 18px;
+  cursor: context-menu;
 }
 .c-body .c-body-mid .c-b-m-content .cmd-card .cmd-card-title h3 {
   font-weight: bolder;
+}
+@media screen and (max-width: 500px) {
+  .c-body .c-body-mid .c-b-m-content .cmd-card .cmd-card-title {
+    font-size: 14px;
+  }
 }
 .c-body .c-body-mid .c-b-m-content .cmd-card .cmd-card-link {
   display: flex;
@@ -456,12 +461,14 @@ body {
   width: 100%;
 }
 .c-body .c-body-mid .c-b-m-content .cmd-card .cmd-card-link button {
+  color: white;
   padding: 10px 30px;
   cursor: pointer;
-  background-color: #fff;
+  background-color: transparent;
   outline: 0px;
   border: none;
   border-radius: 50px;
+  box-shadow: 0px 0px 1px 2px #310452;
   transition: all 0.4s ease;
   font-weight: bold;
 }
@@ -470,17 +477,210 @@ body {
   color: white;
 }
 
-.window-login-content {
-  position: absolute;
-  display: block;
-  top: 50%;
-  left: 50%;
-  margin-top: -15%;
-  margin-left: -10%;
-  height: 60%;
-  width: 20%;
-  border-radius: 30px;
+.c-body-content-pro {
+  height: auto;
+  width: 100%;
+}
+.c-body-content-pro .pro-title {
+  max-width: 1170px;
+  margin: 0 auto;
+  height: 70px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.c-body-content-pro .pro-title h1 {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #161616;
+  border: 2px solid indigo;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 600px), (orientation: portrait) {
+  .c-body-content-pro .pro-title h1 {
+    width: 100%;
+    font-size: 1em;
+  }
+}
+.c-body-content-pro .pro-view-over {
+  max-width: 1170px;
+  margin: 0 auto;
+  overflow: scroll;
+  overflow-y: hidden;
+}
+.c-body-content-pro .pro-view-over::-webkit-scrollbar {
+  background-color: #161616;
+  border-radius: 50px;
+  height: 10px;
+}
+.c-body-content-pro .pro-view-over::-webkit-scrollbar-track {
+  width: 10%;
+}
+.c-body-content-pro .pro-view-over::-webkit-scrollbar-thumb {
   background-color: indigo;
+  border-radius: 50px;
+}
+.c-body-content-pro .pro-view-scroll {
+  width: 100%;
+  height: auto;
+}
+.c-body-content-pro .pro-view-scroll .link-card-pro {
+  height: 100%;
+  padding-bottom: 30px;
+  transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.c-body-content-pro .pro-view-scroll .pro-view-scroll-content {
+  margin: 0 auto;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.c-body-content-pro .pro-view-scroll .pro-view-scroll-content .card-view-sc {
+  height: 100%;
+  min-width: 220px;
+  border: 5px solid transparent;
+  padding: 10px;
+  border-collapse: collapse;
+}
+.c-body-content-pro .pro-view-scroll .pro-view-scroll-content .card-view-sc .card-view-sc-content {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.link-card-pro {
+  text-decoration: none;
+}
+
+.card-pro-item {
+  background: linear-gradient(to top, indigo 0% 20%, black 60% 100%);
+  border: 2px solid indigo;
+  width: 220px;
+  height: 270px;
+  border-radius: 10px;
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.card-pro-item:hover {
+  transform: scale(1.02);
+}
+@media screen and (max-width: 600px) {
+  .card-pro-item {
+    width: 167px;
+    height: 220px;
+  }
+}
+.card-pro-item .top-card-img {
+  width: 100%;
+  height: 60%;
+  border-radius: 10px 10px 0px 0px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-pro-item .top-card-img picture {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-pro-item .top-card-img img {
+  width: 60%;
+  margin: 0 auto;
+  transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.card-pro-item .top-card-img img:hover {
+  transform: rotate(10deg);
+}
+.card-pro-item .mid-card-info {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.card-pro-item .mid-card-info p {
+  font-size: 12px;
+}
+@media screen and (max-width: 600px) {
+  .card-pro-item .mid-card-info p {
+    font-size: 10px;
+  }
+}
+.card-pro-item .foo-card-buy {
+  width: 100%;
+  height: 20%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.card-pro-item .foo-card-buy .card-price {
+  font-size: 1em;
+  color: #2fb40d;
+  font-weight: 700;
+}
+@media screen and (max-width: 600px) {
+  .card-pro-item .foo-card-buy .card-price {
+    font-size: 0.7em;
+  }
+}
+.card-pro-item .foo-card-buy .card-price p:nth-child(2) {
+  font-size: 10px;
+}
+.card-pro-item .foo-card-buy .card-buy-bt .bt-buy-sty {
+  padding: 5px 10px;
+  border-radius: 50px;
+  border: 2px solid #2fb40d;
+  background-color: transparent;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.card-pro-item .foo-card-buy .card-buy-bt .bt-buy-sty:hover {
+  background-color: #2fb40d;
+}
+@media screen and (max-width: 600px) {
+  .card-pro-item .foo-card-buy .card-buy-bt .bt-buy-sty {
+    font-size: 12px;
+  }
+}
+
+.pro-all-itens {
+  height: auto;
+  width: 100%;
+  padding: 50px 0px;
+}
+.pro-all-itens .pro-all-itens-content {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+  grid-gap: 10px;
+}
+@media screen and (max-width: 600px) {
+  .pro-all-itens .pro-all-itens-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card-pro-item-promo {
+  background: linear-gradient(to top, #310452, indigo);
+  border: 2px solid rgb(255, 0, 0);
 }
 
 /*# sourceMappingURL=index.css.map */
