@@ -8,12 +8,6 @@
 * {
   margin: var.$no-margin;
   padding: var.$no-padding;
-  dl,
-  ol,
-  ul {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
 }
 
 .card-pro-padding-bt-0 {
@@ -25,8 +19,6 @@
 }
 
 body {
-  margin: var.$no-margin;
-  padding: var.$no-padding;
   background-color: black;
   font-family: var.$inter;
   color: color.$white;
@@ -589,7 +581,7 @@ body {
 
 .card-pro-item {
   background: linear-gradient(to top, indigo 0% 20%, black 60% 100%);
-  border: 2px solid indigo;
+  border: 1px solid indigo;
   width: 220px;
   height: 270px;
   border-radius: 10px;
@@ -718,5 +710,5 @@ body {
 
 .card-pro-item-promo {
   background: linear-gradient(to top, color.$indigo-2, indigo);
-  border: 2px solid rgb(255, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
 }
