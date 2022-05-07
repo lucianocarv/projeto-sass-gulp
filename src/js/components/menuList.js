@@ -4,7 +4,7 @@ let setLinksMenu = [
   'games',
   'cadeiras',
   'computadores',
-  'celular e smartphones',
+  'smartphones',
   'tv',
   'tablets',
   'outros',

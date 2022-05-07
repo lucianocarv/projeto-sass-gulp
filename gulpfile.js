@@ -1,4 +1,4 @@
-const { src, dest, watch, parallel } = require('gulp')
+const { src, dest, watch, parallel, symlink } = require('gulp')
 const rename = require('gulp-rename')
 const uglifycss = require('gulp-uglifycss')
 const watcher = watch(['src/styles/css/*.css'])

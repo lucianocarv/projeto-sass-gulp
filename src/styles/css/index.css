@@ -31,6 +31,18 @@ body {
   overflow-x: hidden;
   width: 100%;
 }
+body::-webkit-scrollbar {
+  background-color: #161616;
+  width: 10px;
+}
+body::-webkit-scrollbar-button {
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: indigo;
+  border-radius: 50px;
+  height: 50%;
+}
 
 .h-body {
   width: 100%;
@@ -252,8 +264,21 @@ body {
   position: absolute;
   top: 100px;
   left: 0;
-  height: 100vh;
+  min-height: 100vh;
   transition: all 0.4s ease;
+  overflow-y: scroll;
+  overflow-x: none;
+}
+.display-menu::-webkit-scrollbar {
+  background-color: #161616;
+  width: 10px;
+}
+.display-menu::-webkit-scrollbar-button {
+  background-color: transparent;
+}
+.display-menu::-webkit-scrollbar-thumb {
+  background-color: indigo;
+  border-radius: 50px;
 }
 
 .menu-nav-right {
@@ -481,12 +506,11 @@ body {
   text-align: center;
 }
 .c-body-content-pro .pro-title h1 {
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
   padding: 10px 20px;
   border-radius: 50px;
-  background-color: #161616;
-  border: 2px solid indigo;
+  background-image: linear-gradient(to right, transparent 0% 5%, indigo 45% 55%, transparent 95% 100%);
   box-sizing: border-box;
 }
 @media screen and (max-width: 600px), (orientation: portrait) {

@@ -1,5 +1,5 @@
 {
-  "name": "pj",
+  "name": "ecommerce-gulp-sass",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -15,7 +15,9 @@
     "gulp-rename": "^2.0.0",
     "gulp-uglifycss": "^1.1.0",
     "ruby": "^0.6.1",
-    "sass": "^1.51.0"
+    "sass": "^1.51.0",
+    "sass-convert": "^0.5.2"
+
   },
   "dependencies": {
     "bootstrap-icons": "^1.8.1"

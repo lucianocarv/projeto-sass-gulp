@@ -24,6 +24,21 @@ body {
   color: color.$white;
   overflow-x: hidden;
   width: 100%;
+
+  &::-webkit-scrollbar {
+    background-color: color.$secondary;
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-button {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: indigo;
+    border-radius: 50px;
+    height: 50%;
+  }
 }
 
 // HEADER
@@ -262,8 +277,24 @@ body {
   position: absolute;
   top: 100px;
   left: 0;
-  height: 100vh;
+  min-height: 100vh;
   transition: var.$transition-df;
+  overflow-y: scroll;
+  overflow-x: none;
+
+  &::-webkit-scrollbar {
+    background-color: color.$secondary;
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-button {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: indigo;
+    border-radius: 50px;
+  }
 }
 .menu-nav-right {
   min-height: 100%;
@@ -505,12 +536,16 @@ body {
     text-align: center;
 
     h1 {
-      width: 50%;
+      width: 100%;
       margin: 0 auto;
       padding: 10px 20px;
       border-radius: 50px;
-      background-color: color.$secondary;
-      border: 2px solid indigo;
+      background-image: linear-gradient(
+        to right,
+        transparent 0% 5%,
+        indigo 45% 55%,
+        transparent 95% 100%
+      );
       box-sizing: border-box;
 
       @media screen and (max-width: 600px), (orientation: portrait) {

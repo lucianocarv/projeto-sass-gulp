@@ -11,7 +11,7 @@
 
 // Menu
 let bodyHtml = document.getElementById('absolute-content')
-let menuLeftWidth = '300px'
+let menuLeftWidth = '400px'
 let menuLeftHiddenWidth = `-${menuLeftWidth}`
 let menuDefaultTransition = 'all .5s ease'
 let menuButton = document.getElementById('bt-nav-menu-id')
@@ -40,7 +40,7 @@ const clickMenuForDisplay = () => {
       menuOpen.setAttribute('class', 'fa fa-xmark')
       menuButton.setAttribute('onclick', 'clickMenuClose()')
     } else {
-      menuLeftWidth = '300px'
+      menuLeftWidth = '400px'
       menuHeader.style.width = menuLeftWidth
       menuHeader.style.display = 'block'
       menuButton.style.transform = 'rotateX(180deg)'
