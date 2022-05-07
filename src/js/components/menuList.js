@@ -8,4 +8,28 @@ let setLinksMenu = [
   'tv',
   'tablets',
   'outros',
+  'hardware',
+  'periféricos',
+  'games',
+  'cadeiras',
+  'computadores',
+  'smartphones',
+  'tv',
+  'tablets',
+  'outros',
+  'hardware',
+  'periféricos',
+  'games',
+  'cadeiras',
+  'computadores',
+  'smartphones',
+  'tv',
+  'tablets',
+  'outros',
+]
+
+let iconsList = [
+  '<i class="bi bi-person"></i>',
+  '<i class="bi bi-person"></i>',
+  '<i class="bi bi-person"></i>',
 ]

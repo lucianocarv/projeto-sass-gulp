@@ -65,6 +65,9 @@ const clickMenuClose = () => {
 // Mobile
 
 // Menu Content
+let listMenuLeft = document.createElement('div')
+listMenuLeft.setAttribute('class', 'list-items-left-menu')
+
 let menuContainerTagOpen = '<nav class="menu-nav-right" id="right-nav-content">'
 let menuContainerTagClose = '</nav>'
 let menuLinkOpen = '<a class="menu-li-link-a"'
@@ -72,6 +75,50 @@ let menuLinkClose = '</a>'
 menuDisplay.innerHTML = menuContainerTagOpen + menuContainerTagClose
 let setMenuConatinerListOpen = '<ul id="ex-list-menu">'
 let setMenuConatinerListClose = '</ul>'
+
+menuDisplay.appendChild(listMenuLeft)
+let iconsListLeft = document.querySelector('.list-items-left-menu')
+let flexDisplayIcons = document.createElement('div')
+flexDisplayIcons.setAttribute('id', 'flex-icons-left')
+iconsListLeft.appendChild(flexDisplayIcons)
+let areaIcons = document.getElementById('flex-icons-left')
+
+let icon1 = document.createElement('div')
+areaIcons.appendChild(icon1)
+icon1.innerHTML = '<i class="bi bi-person"></i>'
+icon1.setAttribute('class', 'div-icon-cont')
+icon1.setAttribute('title', 'Meu Perfil')
+
+let icon2 = document.createElement('div')
+areaIcons.appendChild(icon2)
+icon2.innerHTML = '<i class="bi bi-heart"></i>'
+icon2.setAttribute('class', 'div-icon-cont')
+
+let icon3 = document.createElement('div')
+areaIcons.appendChild(icon3)
+icon3.innerHTML = '<i class="bi bi-cart3"></i>'
+icon3.setAttribute('class', 'div-icon-cont')
+
+let icon4 = document.createElement('div')
+areaIcons.appendChild(icon4)
+icon4.innerHTML = '<i class="bi bi-gear"></i>'
+icon4.setAttribute('class', 'div-icon-cont')
+
+let icon5 = document.createElement('div')
+areaIcons.appendChild(icon5)
+icon5.innerHTML = '<i class="bi bi-bookmark-check"></i>'
+icon5.setAttribute('class', 'div-icon-cont')
+
+let icon6 = document.createElement('div')
+areaIcons.appendChild(icon6)
+icon6.innerHTML = '<i class="bi bi-chat"></i>'
+icon6.setAttribute('class', 'div-icon-cont')
+
+let icon7 = document.createElement('div')
+areaIcons.appendChild(icon7)
+icon7.innerHTML = '<i class="bi bi-question"></i>'
+icon7.setAttribute('class', 'div-icon-cont')
+
 let getMenuArea = document.getElementById('right-nav-content')
 getMenuArea.innerHTML = setMenuConatinerListOpen + setMenuConatinerListClose
 let getMenuAreaUl = document.getElementById('ex-list-menu')
@@ -90,5 +137,7 @@ setLinksMenu.forEach((link) => {
     menuLinkClose
   getMenuAreaUl.insertAdjacentElement('beforeend', liLink)
 })
+
+// Create Icons Left
 
 // Mobile

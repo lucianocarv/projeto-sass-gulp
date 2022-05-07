@@ -12,10 +12,9 @@
 
 .card-pro-padding-bt-0 {
   height: 100%;
-  padding-bottom: 0px;
+  padding: 0px 10px 0px 0px;
   transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
   text-decoration: none;
-  margin-left: 10px;
 }
 
 body {
@@ -281,6 +280,9 @@ body {
   transition: var.$transition-df;
   overflow-y: scroll;
   overflow-x: none;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-areas: 'list-l menu-l';
 
   &::-webkit-scrollbar {
     background-color: color.$secondary;
@@ -296,9 +298,41 @@ body {
     border-radius: 50px;
   }
 }
+
+.list-items-left-menu {
+  width: 100%;
+  height: 100%;
+  grid-area: list-l;
+  background-color: indigo;
+  padding-top: 50px;
+
+  .flex-icons-left {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+.div-icon-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 10px 0px;
+  font-size: 28px;
+  cursor: pointer;
+  transition: var.$transition-df;
+
+  &:hover {
+    color: #8a8a8a;
+  }
+}
 .menu-nav-right {
-  min-height: 100%;
-  background: linear-gradient(to bottom, indigo, black);
+  min-height: auto;
+  background-color: color.$indigo-2;
+  grid-area: menu-l;
   .ex-menu-list-r {
     padding-top: 50px;
     width: 100%;
@@ -309,6 +343,7 @@ body {
       .menu-li-link-a {
         @include mixin.flex(center, space-between);
 
+        font-size: 18px;
         padding: 8px 10px;
         margin: 1px auto;
         text-decoration: none;
@@ -588,6 +623,7 @@ body {
       margin: 0 auto;
       display: flex;
       padding: 10px;
+      padding-left: 0px;
       align-items: center;
       justify-content: flex-start;
 
