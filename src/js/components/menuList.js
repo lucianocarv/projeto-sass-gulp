@@ -27,9 +27,3 @@ let setLinksMenu = [
   'tablets',
   'outros',
 ]
-
-let iconsList = [
-  '<i class="bi bi-person"></i>',
-  '<i class="bi bi-person"></i>',
-  '<i class="bi bi-person"></i>',
-]
