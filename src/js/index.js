@@ -11,9 +11,8 @@
 
 // Menu
 let bodyHtml = document.getElementById('absolute-content')
-let menuLeftWidth = '400px'
+let menuLeftWidth = '350px'
 let menuLeftHiddenWidth = `-${menuLeftWidth}`
-let menuDefaultTransition = 'all .5s ease'
 let menuButton = document.getElementById('bt-nav-menu-id')
 menuButton.setAttribute('onclick', 'clickMenuForDisplay()')
 let menuHeader = document.createElement('div')
@@ -27,7 +26,7 @@ let menuDisplay = document.querySelector('#display-menu-id')
 let getHeaderHeight = document.getElementById('h-body-id')
 let clientHeightHeader = getHeaderHeight.clientHeight
 menuDisplay.style.top = `${clientHeightHeader}px`
-menuDisplay.style.height = '100vh'
+menuDisplay.style.height = 'auto'
 
 // Event Menu Display
 const clickMenuForDisplay = () => {
@@ -39,14 +38,19 @@ const clickMenuForDisplay = () => {
       menuHeader.style.marginLeft = '0px'
       menuOpen.setAttribute('class', 'fa fa-xmark')
       menuButton.setAttribute('onclick', 'clickMenuClose()')
+
+      let bodyC = document.getElementsByClassName('c-body')[0]
+      bodyC.style.opacity = '0.5'
     } else {
-      menuLeftWidth = '400px'
+      menuLeftWidth = '350px'
       menuHeader.style.width = menuLeftWidth
-      menuHeader.style.display = 'block'
       menuButton.style.transform = 'rotateX(180deg)'
       menuHeader.style.marginLeft = '0px'
       menuOpen.setAttribute('class', 'fa fa-xmark')
       menuButton.setAttribute('onclick', 'clickMenuClose()')
+
+      let bodyC = document.getElementsByClassName('c-body')[0]
+      bodyC.style.opacity = '0.5'
     }
   }
 }
@@ -60,9 +64,25 @@ const clickMenuClose = () => {
   menuButton.style.transform = 'none'
   menuButton = document.getElementById('bt-nav-menu-id')
   menuButton.setAttribute('onclick', 'clickMenuForDisplay()')
+
+  let bodyC = document.getElementsByClassName('c-body')[0]
+  bodyC.style.opacity = '1'
 }
 
-// Mobile
+// c-b-t-content
+function setSlide() {
+  let slide = Array.from(document.getElementsByClassName('slidec'))
+  let containerSlideWidth = document.getElementById('slide-content').clientWidth
+  let containerSlideHeight =
+    document.getElementById('slide-content').clientHeight
+  console.log(containerSlideWidth)
+  slide.forEach((slide) => {
+    slide.style.width = `${containerSlideWidth}px`
+    slide.style.height = `${containerSlideHeight}px`
+    slide.style.position = 'absolute'
+  })
+}
+setSlide()
 
 // Menu Content
 let listMenuLeft = document.createElement('div')
@@ -93,31 +113,37 @@ let icon2 = document.createElement('div')
 areaIcons.appendChild(icon2)
 icon2.innerHTML = '<i class="bi bi-heart"></i>'
 icon2.setAttribute('class', 'div-icon-cont')
+icon2.setAttribute('title', 'Favoritos')
 
 let icon3 = document.createElement('div')
 areaIcons.appendChild(icon3)
 icon3.innerHTML = '<i class="bi bi-cart3"></i>'
 icon3.setAttribute('class', 'div-icon-cont')
+icon3.setAttribute('title', 'Meu Carrinho')
 
 let icon4 = document.createElement('div')
 areaIcons.appendChild(icon4)
 icon4.innerHTML = '<i class="bi bi-gear"></i>'
 icon4.setAttribute('class', 'div-icon-cont')
+icon4.setAttribute('title', 'Configurações')
 
 let icon5 = document.createElement('div')
 areaIcons.appendChild(icon5)
 icon5.innerHTML = '<i class="bi bi-bookmark-check"></i>'
 icon5.setAttribute('class', 'div-icon-cont')
+icon5.setAttribute('title', 'Salvos')
 
 let icon6 = document.createElement('div')
 areaIcons.appendChild(icon6)
 icon6.innerHTML = '<i class="bi bi-chat"></i>'
 icon6.setAttribute('class', 'div-icon-cont')
+icon6.setAttribute('title', 'Chat')
 
 let icon7 = document.createElement('div')
 areaIcons.appendChild(icon7)
 icon7.innerHTML = '<i class="bi bi-question"></i>'
 icon7.setAttribute('class', 'div-icon-cont')
+icon7.setAttribute('title', 'Dúvidas')
 
 let getMenuArea = document.getElementById('right-nav-content')
 getMenuArea.innerHTML = setMenuConatinerListOpen + setMenuConatinerListClose
