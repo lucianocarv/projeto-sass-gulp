@@ -10,7 +10,6 @@
   position: fixed;
   left: 0;
   max-height: 100vh;
-  transition: all 0.4s ease;
   overflow-y: scroll;
   overflow-x: none;
   display: grid;
@@ -64,7 +63,6 @@
   padding: 10px 0px;
   font-size: 28px;
   cursor: pointer;
-  transition: var.$transition-df;
 
   &:hover {
     color: rgb(125, 120, 128);
@@ -95,7 +93,6 @@
         margin: 1px auto;
         text-decoration: none;
         font-weight: bolder;
-        transition: var.$transition-df;
 
         &:hover {
           background-color: rgba(75, 0, 130, 0.5);
@@ -114,12 +111,7 @@
     font-size: 25px;
     width: 50px;
     cursor: pointer;
-    transition: var.$transition-df;
     color: white;
-
-    .bt-menu-h {
-      transition: all 0.5s ease;
-    }
   }
   .h-nav-bottom {
     height: 50px;
@@ -155,7 +147,6 @@
         .menu-li-link-a {
           @include mixin.flex(center, space-between);
           text-decoration: none;
-          transition: var.$transition-df;
           font-size: 14px;
           padding: 10px;
         }

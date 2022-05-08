@@ -40,7 +40,9 @@ const clickMenuForDisplay = () => {
       menuButton.setAttribute('onclick', 'clickMenuClose()')
 
       let bodyC = document.getElementsByClassName('c-body')[0]
-      bodyC.style.opacity = '0.5'
+      bodyC.style.opacity = '0.3'
+      let bodyf = document.getElementsByClassName('f-body')[0]
+      bodyf.style.opacity = '0.3'
     } else {
       menuLeftWidth = '350px'
       menuHeader.style.width = menuLeftWidth
@@ -51,6 +53,9 @@ const clickMenuForDisplay = () => {
 
       let bodyC = document.getElementsByClassName('c-body')[0]
       bodyC.style.opacity = '0.5'
+
+      let bodyf = document.getElementsByClassName('f-body')[0]
+      bodyf.style.opacity = '0.5'
     }
   }
 }
@@ -67,6 +72,9 @@ const clickMenuClose = () => {
 
   let bodyC = document.getElementsByClassName('c-body')[0]
   bodyC.style.opacity = '1'
+
+  let bodyf = document.getElementsByClassName('f-body')[0]
+  bodyf.style.opacity = '1'
 }
 
 // c-b-t-content
@@ -75,7 +83,6 @@ function setSlide() {
   let containerSlideWidth = document.getElementById('slide-content').clientWidth
   let containerSlideHeight =
     document.getElementById('slide-content').clientHeight
-  console.log(containerSlideWidth)
   slide.forEach((slide) => {
     slide.style.width = `${containerSlideWidth}px`
     slide.style.height = `${containerSlideHeight}px`
@@ -163,7 +170,3 @@ setLinksMenu.forEach((link) => {
     menuLinkClose
   getMenuAreaUl.insertAdjacentElement('beforeend', liLink)
 })
-
-// Create Icons Left
-
-// Mobile
