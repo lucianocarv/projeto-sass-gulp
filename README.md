@@ -1,3 +1,4 @@
+
 <h1>e-commerce gulp&sass</h1>
 
 este projeto tem como objetivo treinar as habilidades com JavaScript, Gulp.js e Sass criando um layout de uma landing page fictício de produtos eletrônicos.<br>
@@ -22,7 +23,7 @@ este projeto tem como objetivo treinar as habilidades com JavaScript, Gulp.js e 
   <li><code>flex-box</code></li>
   <li><code>css grid</code></li>
   <li><code>javascript + html + css</code></li>
-  <li><code>bootstrap</code></li>
+  <li><code>bootstrap icons</code></li>
   <li><code>gulp</code></li>
   <li><code>sass</code></li>
 </ul>
