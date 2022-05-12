@@ -784,7 +784,7 @@ body {
 }
 
 .final-footer {
-  min-width: 1170px;
+  max-width: 1170px;
   height: 400px;
   padding-top: 50px;
 
@@ -797,6 +797,11 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
+  flex-wrap: wrap;
+
+  @media (min-width: 600px) {
+    justify-content: center;
+  }
 }
 
 .ff-div {

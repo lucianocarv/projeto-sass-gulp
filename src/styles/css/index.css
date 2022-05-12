@@ -871,7 +871,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .final-footer {
-  min-width: 1170px;
+  max-width: 1170px;
   height: 400px;
   padding-top: 50px;
   border-top: 1px solid white;
@@ -883,6 +883,12 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
+  flex-wrap: wrap;
+}
+@media (min-width: 600px) {
+  .final-f-content {
+    justify-content: center;
+  }
 }
 
 .ff-div {
