@@ -78,18 +78,6 @@ const clickMenuClose = () => {
 }
 
 // c-b-t-content
-function setSlide() {
-  let slide = Array.from(document.getElementsByClassName('slidec'))
-  let containerSlideWidth = document.getElementById('slide-content').clientWidth
-  let containerSlideHeight =
-    document.getElementById('slide-content').clientHeight
-  slide.forEach((slide) => {
-    slide.style.width = `${containerSlideWidth}px`
-    slide.style.height = `${containerSlideHeight}px`
-    slide.style.position = 'absolute'
-  })
-}
-setSlide()
 
 // Menu Content
 let listMenuLeft = document.createElement('div')

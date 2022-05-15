@@ -152,8 +152,8 @@ ul {
 }
 .login-area-content {
   position: absolute;
-  width: 30%;
-  height: 100%;
+  width: auto;
+  height: auto;
   top: 0;
   display: flex;
   align-items: center;
@@ -162,19 +162,21 @@ ul {
 }
 
 .mode-off {
-  left: -30%;
+  top: -100%;
+  left: calc(50% - 250px);
   transform: skewX(5deg) skewY(180deg) scale(0.1);
 }
 
 .mode-on {
   position: fixed;
-  left: 0px;
+  top: calc(50% - 300px);
+  left: calc(50% - 250px);
   transform: scale(1);
 }
 
 .container-child-login {
-  width: 90%;
-  height: 700px;
+  min-width: 500px;
+  height: 600px;
   background-color: white;
   border-radius: 12px;
 }
